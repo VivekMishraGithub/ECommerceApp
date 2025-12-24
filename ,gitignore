@@ -1,0 +1,23 @@
+# Java / Spring
+target/
+*.log
+*.class
+
+# Maven / Gradle
+.mvn/
+gradle/
+build/
+
+# Angular / Node
+node_modules/
+dist/
+.angular/
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
