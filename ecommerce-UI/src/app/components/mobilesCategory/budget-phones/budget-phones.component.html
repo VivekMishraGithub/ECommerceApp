@@ -1,0 +1,12 @@
+<div class="product-grid">
+  <div 
+    class="product-card"
+    *ngFor="let product of budgetphonesList"
+    (click)="openProductDetails(product.productId)"
+  >
+    <img src="assets/samsungF06.jpg" height="80px" width="40px" alt="{{ product.productName }}" />
+    <h3>{{ product.productName }}</h3>
+    <p>{{ product.productDesc }}</p>
+    <p class="price">₹{{ product.productPrice }}</p>
+  </div>
+</div>

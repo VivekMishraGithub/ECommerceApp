@@ -1,0 +1,20 @@
+<div class="login-container">
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    
+        <!-- Login -->
+    <div class="modal-content" *ngIf="!hideLoginForm">
+    <h2>Login</h2>
+    <input type="text" [(ngModel)]="user.username" name="username" placeholder="Username" required />
+    <input type="password" [(ngModel)]="user.password" name="password" placeholder="Password" required />
+    <button class="submitBtn" type="submit">Login</button>
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+
+    <!-- Register button -->
+     <span style="display: flex;">
+     <p>Don't have an account? &nbsp;</p><p class="signupBtn" (click)="openRegisterModal()"> Sign-up &nbsp;</p> <p> now!</p>
+     </span>
+    </div>
+    <app-register *ngIf="showRegisterModal" (close)="closeRegisterModal()"></app-register>
+
+  </form>
+</div>

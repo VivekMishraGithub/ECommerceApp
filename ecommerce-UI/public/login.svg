@@ -1,0 +1,13 @@
+<svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- User Icon -->
+  <g transform="translate(20,10)">
+    <circle cx="10" cy="6" r="5" fill="white"/>
+    <path d="M0 20c0-5 5-8 10-8s10 3 10 8" fill="white"/>
+  </g>
+
+  <!-- Login Text -->
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        fill="white" font-size="16" font-family="Arial, sans-serif" font-weight="bold">
+    Login
+  </text>
+</svg>

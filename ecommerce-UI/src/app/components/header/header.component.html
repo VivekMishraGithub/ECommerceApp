@@ -1,0 +1,31 @@
+<nav class="navbar">
+  <img routerLink="/home" height="50px" src="assets/app-logo2.png" class="homeTab">
+  <div class="searchDiv">
+    <input class="searchBar" type="text" title="Search for Products, Brands and More" name="q" autocomplete="off" placeholder="Search for Products, Brands and More">
+  </div>
+  <img src="assets/searchBtn.svg">
+  <div class="navbar-right" style="align-content: center;">
+    <div *ngIf="!isLoggedIn">
+      <a routerLink="/login" class="loginBtn">
+        <img src="assets/login.svg">
+      </a>
+    </div>
+    <div class="dropdown user-dropdown" *ngIf="isLoggedIn">
+      <button class="user-btn">{{ username }}</button>
+      <div class="user-dropdown-content">
+        <p>Name - {{ name }}</p>
+        <p>Email - {{ email }}</p>
+        <button (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbarSec">
+  <div *ngFor="let items of categoryList" class="dropdown">
+    {{items.name}}
+    <div class="dropdown-content">
+    <a *ngFor="let list of items.subcategories" [routerLink]="['/', formatRoute(items.name), formatRoute(list.name)]">{{list.name}}</a>
+    </div>
+  </div>
+</nav>
